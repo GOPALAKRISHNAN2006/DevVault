@@ -70,4 +70,27 @@ export const login = async(req,res)=>{
             message:"Error while Login..."
         })
     }
+};
+
+export const getMe = async(req,res)=>{
+    try{
+        const id = req.user.id;
+        const user = await User.findById(id);
+        if(!user){
+            return res.status(400).json({
+                success:false,
+                message:"User not exist"
+            });
+        }
+        return res.status(200).json({
+            success:true,
+            user
+        });
+    }catch(error){
+        console.log(error);
+        return res.status(400).json({
+            success:false,
+            message:"Error while fetching user"
+        })
+    }
 }
