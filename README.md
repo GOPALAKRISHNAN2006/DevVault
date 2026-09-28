@@ -1,4 +1,4 @@
-# 🔐 DevVault
+# 🔐 DevVault-Vault for Developer
 
 DevVault is a **MERN stack developer resource management application** that allows developers to securely save, organize, manage, and access useful development resources in one place.
 
